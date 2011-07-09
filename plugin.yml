@@ -1,0 +1,9 @@
+name: NightLight
+main: couk.Adamki11s.NightLight.NightLight
+version: 1.0
+author: Adamki11s
+commands:
+  nightlight:
+    aliases: nl
+    description: NightLight
+    usage: |
