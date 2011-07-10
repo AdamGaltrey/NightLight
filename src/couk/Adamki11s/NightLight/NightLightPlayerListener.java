@@ -1,7 +1,6 @@
 package couk.Adamki11s.NightLight;
 
 import java.util.HashMap;
-import java.util.logging.Logger;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
