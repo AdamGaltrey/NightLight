@@ -45,15 +45,15 @@ public class NightLightPlayerListener extends PlayerListener {
 				loc.setY(loc.getY() - 1);
 				
 				if(previousLoc.containsKey(p)){
-					w.getBlockAt(previousLoc.get(p)).setTypeId(previousBlock.get(p));
-					w.getBlockAt(previousLoc.get(p)).setData(previousBlockData.get(p));
-				}			
+					p.sendBlockChange(previousLoc.get(p), previousBlock.get(p), (byte)previousBlockData.get(p));
+				}		
+				
 				
 				if(w.getBlockAt(loc).getType() != Material.AIR){
 					previousBlock.put(p, w.getBlockAt(loc).getTypeId());
 					previousBlockData.put(p, w.getBlockAt(loc).getData());
 					previousLoc.put(p, loc);
-					w.getBlockAt(loc).setType(Material.GLOWSTONE);	
+					p.sendBlockChange(loc, Material.GLOWSTONE, (byte)0);
 				}
 		}
 	}
